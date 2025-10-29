@@ -40,12 +40,15 @@ Python的语法接近自然英语，降低了学习曲线，这无疑是新手�
 
 ## 2 庞大完整的第三方库
 
-前面提到，Python拥有庞大且完整的第三方库，覆盖几乎所有应用场景。Python真正强大的地方不仅在于语言本身的设计，更在于其庞大而完整的第三方库生态系统。这种"电池包含"（Batteries Included）的设计哲学，使得Python能够轻松应对各种复杂的应用场景。
+前面提到，Python拥有庞大且完整的第三方库，覆盖几乎所有应用场景。Python真正强大的地方不仅在于语言本身的设计，更在于其庞大而完整的第三方库生态系统。这种"电池包含"（Batteries Included）[^1]的设计哲学，使得Python能够轻松应对各种复杂的应用场景。
 
-Python的包管理非常方便
+[^1]: 开箱即用，功能齐全，让Python初学者避免在项目初期陷入复杂的依赖和环境配置问题，强调的是语言的便利性和自给自足的特性。
+
+而为了管理这些第三方库，Python有一个强大的管理工具——`pip`
+
+安装任何第三方库通常只需一行命令
 
 ```bash
-# 安装任何第三方库通常只需一行命令
 pip install package_name
 ```
 
@@ -64,7 +67,7 @@ source my_project_env/bin/activate
 
 创建相互独立的虚拟环境，互不干扰，非常适合一些公用服务器环境隔离管理。
 
-接下来举几个常见的使用场景：
+接下来举几个常见的第三方库使用场景：
 
 ### 2.1 机器学习、数据科学
 
@@ -230,7 +233,9 @@ source my_project_env/bin/activate
 ### 3.1 主流AI框架的Python优先策略
 
 **TensorFlow**：Google开发的深度学习框架，提供完整的Python API
+
 **PyTorch**：Facebook主导的研究友好型框架，Python原生体验极佳
+
 **Keras**：高层神经网络API，进一步简化了深度学习模型构建
 
 ### 3.2 生成式AI的Python偏好：
@@ -242,8 +247,11 @@ ChatGPT、Copilot等AI编程助手在生成代码时优先输出Python版本，�
 Python并非孤立存在，而是能与多种语言协同工作，兼顾开发效率与执行性能。
 
 **NumPy**：底层使用C和Fortran实现核心计算，提供Python接口
+
 **Cython**：允许在Python中调用C/C++代码，提升关键路径性能
+
 **Jython/IronPython**：分别实现Python与Java/.NET平台的互操作
+
 **RPC/gRPC**：支持跨语言服务调用，便于构建异构系统
 
 这种"胶水语言"特性让Python能够在保持开发效率的同时，在性能敏感场景下借助其他语言优势。
